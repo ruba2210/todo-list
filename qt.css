@@ -1,0 +1,132 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#todo-app {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4682b4;
+}
+
+.filters {
+    margin: 20px 0;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 10px;
+    background-color: #ffebcd;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: #f4a460;
+}
+
+/* Liste des tâches */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ffebcd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Mode sombre */
+/* Mode sombre */
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Changer la couleur des sections */
+body.dark header,
+body.dark section,
+body.dark footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Changer les boutons et les champs d'entrée */
+body.dark button {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark input,
+body.dark select {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
