@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Avancée</title>
+    <link rel="stylesheet" href="qt.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-blue-600 text-white p-5 rounded-b-lg shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-semibold">Ma To-Do List</h1>
+            <button id="toggleTheme" class="p-2 bg-gray-800 text-white rounded-lg shadow-md">
+                🌙 Mode Sombre
+            </button>
+
+    </header>
+
+    <main class="container mx-auto p-8">
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Gérez vos tâches</h2>
+
+            <!-- Formulaire d'ajout de tâche -->
+            <div class="flex space-x-4 mb-6">
+                <input type="text" id="taskInput" placeholder="Nouvelle tâche..."
+                    class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select id="category"
+                    class="p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Travail">Travail</option>
+                    <option value="Personnel">Personnel</option>
+                    <option value="Urgent">Urgent</option>
+                </select>
+                <input type="date" id="dueDate"
+                    class="p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="addTaskBtn"
+                    class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Ajouter</button>
+            </div>
+
+            <!-- Recherche et filtres -->
+            <div class="flex space-x-4 mb-6">
+                <input id="searchTask" type="text" placeholder="🔎 Rechercher une tâche..."
+                    class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select id="categoryFilter"
+                    class="p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="all">Toutes</option>
+                    <option value="Travail">Travail</option>
+                    <option value="Personnel">Personnel</option>
+                    <option value="Urgent">Urgent</option>
+                </select>
+            </div>
+
+            <!-- Liste des tâches -->
+            <ul id="taskList" class="space-y-4"></ul>
+
+            <h3 class="text-lg font-semibold mt-8">✅ Tâches complétées</h3>
+            <ul id="completedTasks" class="space-y-4"></ul>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white text-center py-4">
+        <p>&copy; 2025 Ma To-Do List</p>
+    </footer>
+
+    <script src="jv.js"></script>
+</body>
+
+</html>
